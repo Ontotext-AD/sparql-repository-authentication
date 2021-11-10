@@ -1,0 +1,12 @@
+@prefix rep: <http://www.openrdf.org/config/repository#> .
+@prefix sparql: <http://www.openrdf.org/config/repository/sparql#> .
+
+<#remote> a rep:Repository;
+  rep:repositoryID "remote";
+  rep:repositoryImpl [
+      rep:repositoryType "graphdb:SPARQLRepository";
+      sparql:query-endpoint <http://query.example.com/sparql>;
+      sparql:username "myUser" ;
+      sparql:password "myPassword";
+    ];
+  rdfs:label "remote" .
